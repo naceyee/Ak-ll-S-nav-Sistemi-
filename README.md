@@ -127,27 +127,3 @@ SELECT * FROM fn_BosDerslikler('2026-06-01', 1);
 
 
 
-## 📊 Proje İstatistikleri
-
-| Kategori | Sayı |
-|----------|------|
-| Tablo | 10 |
-| Index | 11 |
-| Stored Procedure | 3 |
-| User Defined Function | 3 |
-| View | 3 |
-| Trigger | 3 |
-
----
-
-## 🧪 Kullanım Örneği
-
-```sql
--- Yeni sınav oluştur
-EXEC sp_SinavVeSalonOlustur @DersID = 25, @Tarih = '2026-06-01', @OturumID = 1;
-
--- Gözetmen ata
-EXEC sp_GozetmenAta @SinavID = 1;
-
--- Yedek al
-EXEC sp_VeritabaniYedekle;
