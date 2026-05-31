@@ -4,7 +4,7 @@ from db import get_connection
 
 st.set_page_config(page_title="Sınav Planlama", layout="wide")
 
-st.title("⚙️ Modül 2: Akıllı Salon ve Kapasite Planlama")
+st.title("Modül 2: Akıllı Salon ve Kapasite Planlama")
 st.markdown("---")
 
 # Bağlantı hatası alıyorsan şimdilik 'Trusted_Connection=yes' ile kendi yetkinle bağlanmayı deneyebilirsin
@@ -30,12 +30,12 @@ if conn:
             with col2:
                 # Sınavlar önceden belirlenmiş "Slotlara" atanır [cite: 11]
                 selected_oturum_id = st.selectbox(
-                    "⏰ Sınav Oturumu",
+                    " Sınav Oturumu",
                     df_oturumlar["OturumID"],
                     format_func=lambda x: f"{df_oturumlar[df_oturumlar['OturumID']==x]['OturumAd'].values[0]}"
                 )
 
-        if st.button("🚀 Salonları Hesapla ve Sınavı Oluştur", type="primary"):
+        if st.button(" Salonları Hesapla ve Sınavı Oluştur", type="primary"):
             cursor = conn.cursor()
             try:
                 # Transaction Yönetimi: Hata olursa ROLLBACK yapılır [cite: 187]

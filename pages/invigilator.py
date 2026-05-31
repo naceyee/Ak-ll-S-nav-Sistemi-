@@ -3,7 +3,7 @@ import pandas as pd
 from db import get_connection
 
 st.set_page_config(page_title="Gözetmen Atama", layout="wide")
-st.title("👨‍🏫 Modül 3: Gözetmen Atama ve Havuz Sistemi")
+st.title("Modül 3: Gözetmen Atama ve Havuz Sistemi")
 st.markdown("---")
 
 conn = get_connection("Admin")
@@ -26,7 +26,7 @@ if conn:
             format_func=lambda x: f"ID: {x} - {df_atamasiz[df_atamasiz['SinavID']==x]['DersAd'].values[0]}"
         )
 
-        if st.button("🚀 Otomatik Gözetmen Ata", type="primary"):
+        if st.button(" Otomatik Gözetmen Ata", type="primary"):
             cursor = conn.cursor()
             try:
                 # sp_GozetmenAta prosedürünü çağır
