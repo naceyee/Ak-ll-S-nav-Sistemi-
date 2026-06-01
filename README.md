@@ -63,11 +63,9 @@ Bu proje, bir fakültenin sınav takvimini oluştururken derslik/öğrenci konte
 
 | View Adı | Görevi |
 |----------|--------|
-| `v_SinavProgrami` | Tüm sınavları ders, tarih, saat, salon ve gözetmen bilgileriyle listeler. |
-| `v_GozetmenGorevDagilimi` | Her personelin toplam görev sayısını gösterir (adil dağıtım kontrolü). |
-| `fn_BosDerslikler` | Belirli bir tarih ve oturumdaki boş salonları listeler. |
-
----
+| `v_SinavProgrami` | Sınavları; ders, bölüm, tarih, saat, atanan salonlar ve görevli gözetmen detaylarıyla birlikte tek bir program listesinde birleştirir. |
+| `v_GozetmenGorevDagilimi` | Personellerin unvan ve bölüm bilgileriyle birlikte toplam görev sayılarını göstererek gözetmen yükünün adil dağıtılmasını denetler. |
+| `v_OturumDolulukRaporu` | Tarih ve oturum bazında fakültedeki sınav salonlarının yüzde kaçının dolu olduğunu (kapasite/doluluk oranını) dinamik olarak raporlar. |
 
 ### 4️⃣ Trigger (Tetikleyici) Nedir?
 > **Bir tabloda INSERT, UPDATE veya DELETE yapıldığında OTOMATİK çalışan yapıdır.**
